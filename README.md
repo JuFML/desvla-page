@@ -26,6 +26,10 @@ The Devsla Page is a project created in a B7W Course to copy the Tesla page only
 
 The project was developed using the following technologies
 
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
 - VS Code
 
 ---
