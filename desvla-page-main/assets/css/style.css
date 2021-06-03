@@ -65,7 +65,9 @@ li a {
     margin-right: 20px;
 }
 
-.body__model a:visited {
+.body__model a:visited,
+.header__models a:visited,
+.header__menu a:visited {
     color: var(--header-color);
 }
 
