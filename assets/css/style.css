@@ -4,6 +4,7 @@
     --h1-color: #393c41;
     --span-color: #6e7378;
 }
+
 /* FONTES*/
 @font-face {
     font-family: GothamMedium;
@@ -13,11 +14,13 @@
     font-family: GothamBook;
     src: url("../fonts/GothamBookRegular.otf")
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: "GothamMedium", Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -28,7 +31,8 @@ body {
     background-size: cover;
     background-position: center;
 }
-.header-area {
+
+.header__area {
     background-color: transparent;
     display: flex;
     justify-content: space-between;
@@ -37,33 +41,43 @@ body {
     padding-right: 20px;
     padding-left: 20px;
 }
-.header-brand img {
+
+.header__brand img {
     width: 120px;
     height: 10px;
 }
-.header-models {
+
+.header__models {
     margin-left: 150px;
 }
-.menu-button img {
+
+.menu__button img {
     width: 18px;
     height: 18px;
 }
+
 ul li {
     list-style: none;
 }
+
 li a {
     text-decoration: none;
     margin-right: 20px;
 }
-a:visited {
+
+.body__model a:visited,
+.header__models a:visited,
+.header__menu a:visited {
     color: var(--header-color);
 }
-.header-models ul,
-.header-menu,
-.header-menu ul  {
+
+.header__models ul,
+.header__menuarea,
+.header__menuarea ul  {
     display: flex;   
 }
-.body-model {
+
+.body__model {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,37 +85,43 @@ a:visited {
     font-family: "GothamBook";
     height: 45vh;
 }
-.body-model h1 {
+
+.body__model h1 {
     font-size: 40px;
     font-weight:600;
     color: var(--h1-color);
     margin-bottom: 5px;
 }
-.body-model span {
+
+.body__model span {
     color: var(--span-color);
 }
 
-.footer-buttonsarea {
+.footer__buttonsarea {
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 340px;
 }
-.button {
+
+.footer__button {
     margin-right: 20px;
     font-size: 13px;
     font-family: "GothamBook";
 }
+
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
 }
-.footer-buttonsarea a {
+
+.footer__buttonsarea a {
     text-decoration: none;
 }
-.button.black {
+
+.footer__button--black {
     display: block;
     background-color: #171a20cc;
     color: #fff;
@@ -109,20 +129,26 @@ footer {
     padding: 12px 75px;
     margin-left: 18px;
 }
-.button.white {
+
+.footer__button--black a {
+    color: #fff;
+}
+.footer__button--white {
     display: block;
     background-color: #ffffffa6;
     color: #171a20;
     border-radius: 25px;
     padding: 12px 55px;
 }
-.footer-arrowsarea {
+
+.footer__arrowsarea {
     display: flex;
     justify-content: center;
     margin-top: 35px;
     height: 40px;
 }
-@keyframes arrow {
+
+@keyframes footer__arrow {
     0% {
         margin-top: 0px;
     }
@@ -133,58 +159,59 @@ footer {
         margin-top: 0px;
     }
 }
+
 .arrow img {
     width: 24px;
-    animation-name: arrow;
+    animation-name: footer__arrow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
 /* MEDIA QUERIES*/
 @media (max-width: 1200px) {
-    .header-models,
-    .menu {
+    .header__models,
+    .header__menu {
         display: none;        
     }
-    .header-menu .menu-button {
+    .header__menuarea .menu__button {
         display: block;
         margin-right: 20px;
     }
-    .footer-buttonsarea {
+    .footer__buttonsarea {
         margin-top: 150px;
     }
-    .button.white,
-    .button.black {
+    .footer__button--white,
+    .footer__button--black {
         padding-top: 11px;
         padding-bottom: 11px;
     }
-    .button {
+    .footer__button {
         font-size: 12px;
     }
 }
+
 @media (max-width: 600px) {
-    .header-models,
-    .menu {
+    .header__models,
+    .header__menu {
         display: none;        
     }
-    .header-menu .menu-button {
+    .header__menuarea .menu__button {
         display: block;
         margin-right: 20px;
     }
-    .footer-buttonsarea {
+    .footer__buttonsarea {
         flex-direction: column;
         align-items: center;
         margin-top: 120px;
     }
-    .button.white,
-    .button.black {
+    .footer__button--white,
+    .footer__button--black {
         width: 95%;
         margin: 5px 30px;
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .button {
+    .footer__button {
         font-size: 10px;
-    }
-   
+    }   
 }
